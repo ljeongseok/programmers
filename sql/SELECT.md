@@ -88,6 +88,26 @@ where intake_condition != "Aged"
 order by animal_id
 ```
 
+## 상위 n개 레코드
+
+__Level1__
+
+동물 보호소에 가장 먼저 들어온 동물의 이름을 조회하는 SQL 문을 작성해주세요.
+
+##### **입출력 예**
+
+| NAME |
+| ---- |
+| Jack |
+
+**코드**
+
+```mysql
+SELECT NAME
+from animal_ins
+order by datetime limit 1
+```
+
 
 
 > 출처 : 프로그래머스 코딩 테스트 연습  https://programmers.co.kr/learn/challenges
