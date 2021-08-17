@@ -88,6 +88,34 @@ where intake_condition != "Aged"
 order by animal_id
 ```
 
+## 동물의 아이디와 이름
+
+**Level1**
+
+동물 보호소에 들어온 모든 동물의 아이디와 이름을 ANIMAL_ID순으로 조회하는 SQL문을 작성해주세요.
+
+**입출력 예**
+
+| ANIMAL_ID | NAME         |
+| --------- | ------------ |
+| A349996   | Sugar        |
+| A350276   | Jewel        |
+| A350375   | Meo          |
+| A352555   | Harley       |
+| A352713   | Gia          |
+| A352872   | Peanutbutter |
+| A353259   | Bj           |
+
+**코드**
+
+```mysql
+SELECT animal_id, name
+from animal_ins
+order by animal_id
+```
+
+
+
 ## 상위 n개 레코드
 
 __Level1__
