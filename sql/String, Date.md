@@ -82,6 +82,32 @@ SELECT animal_id, name, if(sex_upon_intake like '%Neutered%' or sex_upon_intake 
 from animal_ins
 ```
 
+## 오랜 기간 보호한 동물(2)
+
+**Level3**
+
+입양을 간 동물 중, 보호 기간이 가장 길었던 동물 두 마리의 아이디와 이름을 조회하는 SQL문을 작성해주세요. 이때 결과는 보호 기간이 긴 순으로 조회해야 합니다.
+
+**입출력 예**
+
+| ANIMAL_ID | NAME       |
+| --------- | ---------- |
+| A362707   | Girly Girl |
+| A370507   | Emily      |
+
+-  입양을 간 동물이 2마리 이상인 경우만 입력으로 주어집니다.
+
+**코드**
+
+```mysql
+SELECT o.animal_id, o.name
+from animal_outs o
+    inner join animal_ins i
+    on o.animal_id = i.animal_id
+order by o.datetime - i.datetime desc 
+limit 2
+```
+
 
 
 > 출처 : 프로그래머스 코딩테스트 연습  https://programmers.co.kr/learn/courses/30/parts/17043
